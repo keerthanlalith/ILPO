@@ -4,7 +4,7 @@ from baselines import deepq
 
 
 BEST = 1
-DEFAULT = .75
+DEFAULT = .8
 RANDOM = DEFAULT
 
 ENV = "CartPole-v1"
@@ -15,7 +15,7 @@ MODEL = "final_models/cartpole_model.pkl"
 
 def main():
     env = gym.make(ENV)
-    act = deepq.load(MODEL)
+    act = deepq.learn(env, network='mlp', total_timesteps=0, load_path="final_models/cartpole_model.pkl")
     steps = 0
     outfile = open(FILE, 'w')
     bcfile = open(BC_FILE, 'w')
