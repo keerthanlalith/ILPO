@@ -10,7 +10,7 @@ def callback(lcl, _glb):
 
 
 def main():
-    env = gym.make("CartPole-v1")
+    env = gym.make("CartPole-v0")
     act = deepq.learn(
         env,
         network='mlp',
@@ -22,7 +22,7 @@ def main():
         print_freq=10,
         callback=callback
     )
-    print("Saving model to final_models/cartpole_model.pkl")
+    print("Saving model to cartpole_model.pkl")
     act.save("final_models/cartpole_model.pkl")
 
 

@@ -7,7 +7,7 @@ BEST = 1
 DEFAULT = .8
 RANDOM = DEFAULT
 
-ENV = "CartPole-v1"
+ENV = "CartPole-v0"
 FILE = "final_models/cartpole/cartpole.txt"
 BC_FILE = "final_models/cartpole_bc/cartpole_bc.txt"
 MODEL = "final_models/cartpole_model.pkl"
